@@ -1,0 +1,64 @@
+This project is split into 2 separate projects:
+
+	libLevGC
+	Ortho
+
+libLevGC is "leiavoia's Game Core" engine library and provides the framework to run an actual game.
+
+Ortho is the game project proper. It includes libLevGC. It would be very handy to statically link this binary into the final game executable.
+
+
+libLevGC requires the following libs to compile:
+
+	OpenGL (Often "-GL". The really basic stuff. Nothing 2.0+)
+	GLU (OpenGL utility library, often comes with OpenGL)
+	SDL (http://www.libsdl.org/)
+	SDL_image (http://www.libsdl.org/projects/SDL_image/)
+	SDL_mixer (http://www.libsdl.org/projects/SDL_mixer/)
+	freetype2 (http://freetype.sourceforge.net/index2.html)
+	FTGL (http://sourceforge.net/projects/ftgl/)
+
+Ortho just needs the basics: (Ideally it wouldn't even need these. So sue me.)
+
+	OpenGL
+	SDL
+
+For debug output, add flag -DOUTPUT_DEBUG
+
+For Linux systems, add flag -D_LINUX
+
+All builds should use GCC "-Wno-switch-enum" or equivilent to avoid benign enum-switch warnings.
+
+LibLevGC needs these additional flags to build nice: -DTIXML_USE_STL=1 -DLGC_USE_FTGL=1
+
+On Linux at least, libLevGC also needs these folded into the compiler flags:
+
+	`sdl-config --cflags`
+	`freetype-config --cflags`
+
+
+-------------------
+
+
+Projects were developed on Ubuntu/Kubuntu (Linux) 8.10.
+
+Code for both projects compiles clean with no warnings on GCC 4.2.4 with '-Wall -pedantic -Wno-switch-enum'
+
+Code is written to be as crossplatform as possible and doesn't do anything platform-specific that i currently know of.
+
+There's no code repository for this project and it lives only on my home computer. If you make changes to code files, please send back the diff or document the change with references to line numbers. Thanks!
+
+
+
+Potential issues:
+
+- I'm not sure how Windows handles "/" in filenames these days. It may need a new -WINDOWS compiler flag and a few minor changes in filename lookups in about 2 or 3 simple locations in main.cpp. Easy change if needed. If Windows will handle "/" in filenames, it shouldn't be an issue at all.
+
+- I'm also not sure how Windows handles main() vs winmain(), the console, or that sort of thing.
+
+- Ortho's main() attempts to grab the application path via argv[0]. It then uses this to build the relative file names of the resource files it needs. I'm not sure if Windows passes the app path via argv[0] or if this is just a *NIX thing.
+
+----------------------
+
+
+THANKS FOR YOUR HELP. YOU ROCK!
