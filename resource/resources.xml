@@ -1,0 +1,211 @@
+<?xml version="1.0" standalone="no" ?>
+
+<textures>
+
+     <!-- BACKGROUNDS -->
+
+<!-- <texture handle="WoodBG" file="graphics/bg/simple_pastel.jpg"> -->
+<!-- <texture handle="WoodBG" file="graphics/bg/wood_with_corners.jpg"> -->
+<!-- <texture handle="WoodBG" file="graphics/bg/sky_with_border_2.jpg"> -->
+	<texture handle="WoodBG" file="graphics/bg/sky_with_border_2.jpg">
+		<area handle="WoodBG" X1="0" Y1="0" X2="800" Y2="600" />
+	</texture>
+
+	<texture handle="TitleBG" file="graphics/bg/title.jpg">
+		<area handle="TitleBG" X1="0" Y1="0" X2="800" Y2="600" />
+		<area handle="SplashLogo" X1="1" Y1="601" X2="254" Y2="879" />
+	</texture>
+
+	<texture handle="AboutPageBG" file="graphics/bg/plain_board.jpg">
+		<area handle="AboutPageBG" X1="0" Y1="0" X2="800" Y2="600" />
+		<area handle="HowtoPageBG" X1="0" Y1="0" X2="800" Y2="600" />
+	</texture>
+
+	<!-- SPRITES -->
+	<texture handle="sprites" file="graphics/sprites/sprites.png">
+		<area handle="blue_shape" 	X1="0" 	Y1="0" 	X2="40" 	Y2="40" />
+		<area handle="blue_ptr" 		X1="0" 	Y1="40" 	X2="40" 	Y2="80" />
+		<area handle="green_shape" 	X1="40"	Y1="0" 	X2="80" 	Y2="40" />
+		<area handle="green_ptr" 	X1="40" 	Y1="40" 	X2="80" 	Y2="80" />
+		<area handle="yellow_shape" 	X1="80" 	Y1="0" 	X2="120" 	Y2="40" />
+		<area handle="yellow_ptr" 	X1="80" 	Y1="40" 	X2="120" 	Y2="80" />
+		<area handle="red_shape" 	X1="120"	Y1="0" 	X2="160" 	Y2="40" />
+		<area handle="red_ptr" 		X1="120"	Y1="40" 	X2="160" 	Y2="80" />
+		<area handle="purple_shape" 	X1="160"	Y1="0" 	X2="200" 	Y2="40" />
+		<area handle="purple_ptr" 	X1="160"	Y1="40" 	X2="200" 	Y2="80" />
+		<area handle="speed_shape" 	X1="200"	Y1="0" 	X2="240" 	Y2="40" />
+		<area handle="x2_shape" 		X1="200"	Y1="40" 	X2="240" 	Y2="80" />
+		<area handle="x3_shape" 		X1="200"	Y1="80" 	X2="240" 	Y2="120" />
+		<area handle="x4_shape" 		X1="200"	Y1="120" 	X2="240" 	Y2="160" />
+		<area handle="x5_shape" 		X1="200"	Y1="160" 	X2="240" 	Y2="200" />
+		<area handle="half_shape" 	X1="200"	Y1="200" 	X2="240" 	Y2="240" />
+		<area handle="pop_shape"		X1="160"	Y1="80" 	X2="200" 	Y2="120" />
+		<area handle="slow_shape"	X1="160"	Y1="120" 	X2="200" 	Y2="160" />
+		<area handle="1up_shape"		X1="160"	Y1="160" 	X2="200" 	Y2="200" />
+		<area handle="reverse_shape"	X1="160"	Y1="200" 	X2="200" 	Y2="240" />
+		<area handle="bomb_shape"	X1="120"	Y1="160" 	X2="160" 	Y2="200" />
+		<area handle="antidote_shape"	X1="80"	Y1="160" 	X2="120" 	Y2="200" />
+		<area handle="dice_shape"	X1="40"	Y1="200" 	X2="80" 	Y2="240" />
+	</texture>
+
+	<texture handle="sparkle_base" file="graphics/sprites/sparkle_base.png" />
+	<texture handle="sparkle" file="graphics/sprites/sparkle.png" />
+
+	<texture handle="inverted_lightflare" file="graphics/sprites/donut_light.png" />
+	<texture handle="light_sphere" file="graphics/sprites/light_sphere.png" />
+	<texture handle="light_sphere_pointed" file="graphics/sprites/light_sphere_pointed.png" />
+	<texture handle="light_sphere_sharp" file="graphics/sprites/light_sphere_sharp.png" />
+
+</textures>
+
+
+<fonts>
+	<font size="24" file="fonts/arial.ttf">
+		<alias handle="basic_widget" />
+		<alias handle="FaderMessageBox" />
+	</font>
+
+	<font size="20" file="fonts/arial.ttf">
+		<alias handle="ReadingFont" />
+		<alias handle="ScoresPageFont" />
+	</font>
+
+	<font size="18" file="fonts/ethnocen.ttf">
+		<alias handle="TitleButtonFont" />
+		<alias handle="default button font" />
+		<alias handle="default label font" />
+		<alias handle="default dropbox font" />
+		<alias handle="default textbox font" />
+	</font>
+
+	<font size="28" file="fonts/ethnocen.ttf">
+		<alias handle="PageHeadingFont" />
+	</font>
+
+	<font size="56" file="fonts/Monofonto.ttf" advance="0123456789">
+		<alias handle="FPScounter" />
+		<alias handle="UILabelFont" />
+	</font>
+
+	<font size="42" file="fonts/Monofonto.ttf" advance="0123456789">
+		<alias handle="ScoreFloatieFont" />
+		<alias handle="CollectablesFont" />
+	</font>
+
+	<font size="128" file="fonts/Monofonto.ttf" advance="GAMEOVR">
+		<alias handle="GameoverFont" />
+	</font>
+
+
+</fonts>
+
+
+
+<soundfx>
+
+	<sound file="audio/fx/laser.ogg">
+		<alias handle="laser_sound" />
+	</sound>
+
+	<sound file="audio/fx/clear_shape1.ogg">
+		<alias handle="clear_shape1" />
+	</sound>
+
+	<sound file="audio/fx/clear_shape2.ogg">
+		<alias handle="clear_shape2" />
+	</sound>
+
+	<sound file="audio/fx/clear_shape3.ogg">
+		<alias handle="clear_shape3" />
+	</sound>
+
+	<sound file="audio/fx/clear_shape4.ogg">
+		<alias handle="clear_shape4" />
+	</sound>
+
+	<sound file="audio/fx/clear_shape5.ogg">
+		<alias handle="clear_shape5" />
+	</sound>
+
+	<sound file="audio/fx/clear5.ogg">
+		<alias handle="clear5" />
+	</sound>
+
+	<sound file="audio/fx/clear7.ogg">
+		<alias handle="clear7" />
+	</sound>
+
+	<sound file="audio/fx/explosion3.ogg">
+		<alias handle="screen_clear" />
+		<alias handle="clear_screen" />
+	</sound>
+
+	<sound file="audio/fx/explosion2.ogg">
+		<alias handle="game_over" />
+	</sound>
+
+	<sound file="audio/fx/pop1.wav">
+		<alias handle="swap" />
+	</sound>
+
+	<sound file="audio/fx/speedup.ogg">
+		<alias handle="speedup" />
+	</sound>
+
+	<sound file="audio/fx/slowdown.ogg">
+		<alias handle="slowdown" />
+	</sound>
+
+	<sound file="audio/fx/blip_blip.wav">
+		<alias handle="file_warn" />
+	</sound>
+
+	<sound file="audio/fx/blip_blip_vhigh.ogg">
+		<alias handle="file_warn_high" />
+	</sound>
+
+	<sound file="audio/fx/blip6.wav">
+		<alias handle="collect" />
+	</sound>
+
+	<sound file="audio/fx/collect_bad.ogg">
+		<alias handle="collect_bad" />
+	</sound>
+
+	<sound file="audio/fx/pop.wav">
+		<alias handle="pop_special" />
+		<alias handle="use_item" />
+	</sound>
+
+	<sound file="audio/fx/gunshot.wav">
+		<alias handle="pop_shape" />
+	</sound>
+
+	<sound file="audio/fx/infiltrate.ogg">
+		<alias handle="infiltrate" />
+	</sound>
+
+
+</soundfx>
+
+
+
+<music>
+
+<!--	<track file="resource/audio/test/03_b3.ogg">
+		<alias handle="test_bg_music_2" />
+	</track>-->
+
+</music>
+
+
+
+<lights>
+
+</lights>
+
+
+
+<materials>
+
+</materials>
